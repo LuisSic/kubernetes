@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{template "app-chart.fullname" . }}-python-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: {{template "app-chart.fullname" . }}-python
+  template:
+    metadata:
+      labels:
+        component: {{template "app-chart.fullname" . }}-python
+    spec:
+      containers:
+        - name: pythonapp
+          image: 
+          ports:
+            - containerPort: 5000
+          env:
+          - name: REDIS
+            value: redis-cluster-ip-service

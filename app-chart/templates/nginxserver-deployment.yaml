@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{template "app-chart.fullname" . }}-web-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: {{template "app-chart.fullname" . }}-web
+  template:
+    metadata:
+      labels:
+        component: {{template "app-chart.fullname" . }}-web
+    spec:
+      containers:
+        - name: staticweb
+          image: 
+          ports:
+            - containerPort: 80
+    
+
