@@ -17,7 +17,7 @@ The following architecture consisting of two applications. The first application
 
 Below is a diagram of the architecture
 
-<img src="./resources/k8s.png" title="Architecture">
+<img src="./resources/K8S.png" title="Architecture">
 
 ## Deployment
 
